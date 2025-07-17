@@ -1,0 +1,92 @@
+@font-face {
+  font-family: Roboto;
+  src: url("../assets/fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: Forum;
+  src: url("../assets/fonts/Forum-Regular.ttf");
+}
+
+@font-face {
+  font-family: ForumThin;
+  src: url("../assets/fonts/Roboto-Thin.ttf");
+}
+
+* {
+  border: 1px solid red;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+}
+
+.section {
+  padding: 75px 0;
+}
+
+.dark-section {
+  background: #030303;
+}
+
+.video-section {
+  padding-top: 90px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1440px;
+}
+
+.header {
+  background: #030303;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 62px;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo p {
+  font-family: Forum, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 31px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin: 0 0 0 25px;
+}
+
+.header-nav {
+  display: flex;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-list a {
+  font-family: ForumThin, sans-serif;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 22px;
+  line-height: 26px;
+  letter-spacing: 2px;
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 55px;
+}
