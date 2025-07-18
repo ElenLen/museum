@@ -331,6 +331,12 @@ html {
   border-radius: 0px;
 }
 
+.visiting-item:hover .underline-title3::after {
+  width: 100%;
+  left: 0;
+  transition: 1s;
+}
+
 .visiting-text {
   font-family: RobotoThin, sans-serif;
   font-style: normal;
@@ -339,4 +345,35 @@ html {
   line-height: 26px;
   color: #000000;
   margin-top: 10px;
+}
+
+.explore-container {
+  display: flex;
+}
+
+.explore-description {
+  max-width: 660px;
+  margin-right: 60px;
+}
+
+.explore-title {
+  margin-bottom: 103px;
+}
+
+.explore-text {
+  font-family: RobotoLight, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 38px;
+  color: #ffffff;
+  margin-top: 25px;
+}
+
+.explore-text span {
+  color: #caaa7d;
+}
+
+.explore-image {
+  margin-top: 15px;
 }
