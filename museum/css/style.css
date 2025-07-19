@@ -466,7 +466,7 @@ h1 {
   display: flex;
   margin-top: 75px;
   overflow: hidden;
-  height: 1950px;
+  max-height: 1950px;
 }
 
 .block1 {
@@ -484,4 +484,159 @@ h1 {
 
 .block2 {
   margin: 0 36px;
+}
+
+.tikets-items {
+  display: flex;
+  margin-top: 103px;
+  justify-content: space-between;
+}
+
+.tikets-items img {
+  width: 50%;
+  height: 50%;
+}
+
+.tikets-description {
+  display: flex;
+  flex-direction: column;
+}
+
+.tiket-title {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 33px;
+  color: var(--font-black);
+  margin-bottom: 50px;
+}
+
+.tiket-item {
+  font-family: RobotoLight, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 26px;
+  color: var(--font-black);
+  margin-bottom: 25px;
+  cursor: pointer;
+}
+
+.tiket-radio {
+  position: relative;
+  width: 17px;
+  height: 17px;
+  margin-right: 23px;
+  border: 2px solid var(--font-black);
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  vertical-align: middle;
+  background: var(--font-white);
+}
+
+.tiket-radio input[type="radio"] {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.tiket-radio input[type="radio"]:checked + .radio-circle {
+  background: var(--font-black);
+}
+
+.radio-circle {
+  position: absolute;
+  left: 25%;
+  top: 25%;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: transparent;
+  transition: 0.2s;
+}
+
+.tiket-amount-text {
+  font-family: RobotoLight, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 26px;
+  color: var(--font-black);
+  margin-bottom: 15px;
+}
+
+.tiket-amount {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-sizing: border-box;
+  width: 150px;
+  height: 50px;
+  border: 3px solid var(--font-black);
+  margin-bottom: 10px;
+}
+
+.ticket-btn {
+  font-size: 32px;
+  text-align: center;
+  color: var(--font-black);
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.tiket-count {
+  font-family: RobotoLight, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+  color: var(--font-black);
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.tiket-total {
+  margin: 40px 0 60px 0;
+
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 33px;
+  letter-spacing: 1.65px;
+  color: var(--font-black);
+}
+
+.tiket-pay {
+  width: 175px;
+  height: 50px;
+  background: var(--font-black);
+  border-radius: 2px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  letter-spacing: 2px;
+  color: var(--font-white);
+  font-family: RobotoLight, sans-serif;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 26px;
+  cursor: pointer;
+  border: none;
+  transition: 1s;
+}
+
+.tiket-pay:hover {
+  background: var(--font-gold);
+  color: var(--font-black);
 }

@@ -252,27 +252,61 @@
               <img src="./assets/img/galery/galery12.jpg" alt="Gallery Image 12">
             </a>
           </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         </div>
       </div>
     </section>
 
     <section class="section" id="tickets">
-      <div class="container"></div>
+      <div class="container">
+        <h2 class="section-title light-title underline-title">BUY TICKETS</h2>
+        <div class="tikets-items">
+          <img src="./assets/img/tikets.jpg" alt="tikets">
+
+          <div class="tikets-description">
+            <h3 class="tiket-title">Ticket Type</h3>
+
+            <label class="tiket-item">
+              <span class="tiket-radio">
+                <input type="radio" name="group" checked>
+                <span class="radio-circle"></span>
+              </span>
+              Permanent exhibition
+            </label>
+            <label class="tiket-item">
+              <span class="tiket-radio">
+                <input type="radio" name="group">
+                <span class="radio-circle"></span>
+              </span>
+              Temporary exhibition
+            </label>
+            <label class="tiket-item">
+              <span class="tiket-radio">
+                <input type="radio" name="group">
+                <span class="radio-circle"></span>
+              </span>
+              Combined Admission
+            </label>
+          </div>
+
+          <div class="tikets-price">
+            <h3 class="tiket-title">Amount</h3>
+            <p class="tiket-amount-text">Basic 18+</p>
+            <div class="tiket-amount">
+              <button class="ticket-btn" type="button" onclick="this.nextElementSibling.stepDown()">–</button>
+              <input type="number" min="0" max="20" value="1" readonly class="tiket-count">
+              <button class="ticket-btn" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
+            </div>
+            <p class="tiket-amount-text">Senior 65+</p>
+            <div class="tiket-amount">
+              <button class="ticket-btn" type="button" onclick="this.nextElementSibling.stepDown()">–</button>
+              <input type="number" min="0" max="20" value="1" readonly class="tiket-count">
+              <button class="ticket-btn" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
+            </div>
+            <p class="tiket-total">Total €220</p>
+            <button class="tiket-pay">Buy Now</button>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="section" id="contacts">
