@@ -54,7 +54,9 @@ html {
 h1 {
   display: none;
 }
-.dark-section {
+
+.dark-section,
+.dark-footer {
   background: var(--bg-dark);
 }
 
@@ -78,7 +80,8 @@ h1 {
   padding-top: 62px;
 }
 
-.header-logo {
+.header-logo,
+.footer-logo {
   display: flex;
   align-items: center;
 }
@@ -104,7 +107,8 @@ h1 {
   margin-left: 25px;
 }
 
-.header-menu {
+.header-menu,
+.footer-menu {
   display: flex;
 }
 
@@ -112,6 +116,7 @@ h1 {
   display: flex;
   list-style: none;
   justify-content: flex-end;
+  flex-wrap: wrap;
 }
 
 .nav-item {
@@ -269,7 +274,7 @@ h1 {
 }
 
 .slider-item {
-  border: 1 solid var(--font-white);
+  border: 1px solid var(--font-white);
   width: 16px;
   height: 16px;
   background: var(--font-white);
@@ -675,6 +680,120 @@ h1 {
   margin-bottom: 25px;
 }
 
+.contacts-text a {
+  color: var(--font-black);
+  text-decoration: none;
+}
+
+.contacts-text a:hover {
+  color: var(--font-gold);
+}
+
 .contacts-map {
   width: 100%;
+}
+
+.footer-navigation {
+  display: flex;
+  padding-bottom: 50px;
+  justify-content: space-between;
+}
+
+.footer-logo {
+  margin-right: 145px;
+}
+
+.footer-menu {
+  margin-top: 12px;
+}
+
+.footer-nav-list {
+  flex-wrap: wrap;
+  max-width: 485px;
+  justify-content: space-between;
+}
+
+.footer-nav-link {
+  margin-left: 0;
+  margin-right: 150px;
+}
+
+.footer-nav-item {
+  margin-bottom: 25px;
+}
+
+.footer-socials {
+  display: flex;
+  align-items: flex-end;
+}
+
+.socials-nav-item {
+  box-sizing: border-box;
+  width: 48px;
+  height: 48px;
+  border: 1px solid #666666;
+  filter: drop-shadow(0px 0px 0px #666666);
+  border-radius: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 25px;
+  cursor: pointer;
+}
+
+.socials-nav-link {
+  display: flex;
+}
+
+.socials-nav-item:hover .socials-svg {
+  fill: var(--font-gold);
+  transition: 1s;
+}
+
+.socials-nav-item:hover {
+  border: 1px solid var(--font-gold);
+  transition: 1s;
+  filter: drop-shadow(0px 0px 0px var(--font-gold));
+}
+
+.footer {
+  position: relative;
+  padding: 75px 0 50px 0;
+}
+
+.footer::after {
+  content: "";
+  position: absolute;
+  bottom: 125px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  border-radius: 0px;
+  background: #666666;
+}
+
+.footer-discription {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.footer-discription-text {
+  font-family: RobotoThin, sans-serif;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 22px;
+  line-height: 22px;
+  letter-spacing: 2px;
+  color: var(--font-white);
+}
+
+.footer-username {
+  transition: 1s;
+  cursor: pointer;
+}
+
+.footer-username:hover {
+  transform: scale(1.1);
 }
