@@ -28,6 +28,11 @@
   src: url("../assets/fonts/Roboto-Thin.ttf");
 }
 
+@font-face {
+  font-family: RobotoMedium;
+  src: url("../assets/fonts/Roboto-Medium.ttf");
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -639,4 +644,37 @@ h1 {
 .tiket-pay:hover {
   background: var(--font-gold);
   color: var(--font-black);
+}
+
+.parallax-window {
+  min-height: 400px;
+  background: transparent;
+}
+.contacts-items {
+  display: flex;
+  margin-top: 103px;
+  justify-content: space-between;
+}
+
+.contacts-title {
+  font-family: RobotoMedium, sans-serif;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 33px;
+  color: var(--font-black);
+  max-width: 227px;
+  margin-bottom: 50px;
+}
+
+.contacts-text {
+  font-family: RobotoLight, sans-serif;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 26px;
+  color: var(--font-black);
+  margin-bottom: 25px;
+}
+
+.contacts-map {
+  width: 100%;
 }

@@ -173,15 +173,18 @@
             masterpieces such as Mona Lisa or Hammurabi's Code</p>
         </div>
         <div class="video-player">
-          <video src="./assets/video/video0.mp4" poster="./assets/img/video-section/poster0.jpg" controls
+          <video src="./assets/video/video0.mp4" poster="./assets/img/video-section/videoMain.png" controls
             class="video-content"></video>
           <img class="video-control" src="./assets/img/video-section/videoControl.png" alt="video Control">
         </div>
 
         <div class="video-posters">
-          <img class="video-poster" src="./assets/img/video-section/poster3.jpg" alt="poster3">
-          <img class="video-poster" src="./assets/img/video-section/poster1.jpg" alt="poster1">
-          <img class="video-poster" src="./assets/img/video-section/poster2.jpg" alt="poster2">
+          <video src="./assets/video/video1.mp4" poster="./assets/img/video-section/videoSlide1.png" controls
+            class="video-poster"></video>
+          <video src="./assets/video/video2.mp4" poster="./assets/img/video-section/videoSlide2.png" controls
+            class="video-poster"></video>
+          <video src="./assets/video/video3.mp4" poster="./assets/img/video-section/videoSlide3.png" controls
+            class="video-poster"></video>
         </div>
 
         <div class="video-slider">
@@ -309,14 +312,32 @@
       </div>
     </section>
 
+    <div class="parallax-window" data-parallax="scroll" data-image-src="./assets/img/parallax.jpg"></div>
+
     <section class="section" id="contacts">
-      <div class="container"></div>
+      <div class="container">
+        <h2 class="section-title light-title underline-title">Contacts</h2>
+        <div class="contacts-items">
+          <div class="contacts-item">
+            <h3 class="contacts-title">Palais Royal Musee du Louvre</h3>
+            <p class="contacts-text">address: 75001 Paris, France</p>
+            <p class="contacts-text">phone: +33(0) 1 40 20 50 50</p>
+            <p class="contacts-text">mail: info@louvre.fr</p>
+          </div>
+          <div class="contacts-item">
+            <img class="contacts-map" src="./assets/img/map.png" alt="Map">
+          </div>
+        </div>
     </section>
   </main>
 
   <footer class="footer">
     <div class="container"></div>
   </footer>
+
+  <script src="./js/jquery-3.7.1.min.js"></script>
+  <script src="./js/parallax.min.js"></script>
+  <script src="./js/index.js"></script>
 
 </body>
 
