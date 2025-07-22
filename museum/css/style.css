@@ -149,9 +149,13 @@ h1 {
 }
 
 .welcome-container {
-  display: flex;
+  /* display: flex;
   justify-content: space-between;
   text-align: center;
+  position: relative; */
+
+  display: block;
+  text-align: -webkit-right;
   position: relative;
 }
 
@@ -207,6 +211,28 @@ h1 {
   margin-left: auto;
 }
 
+.slick-next:before {
+  content: url("../assets/svg/arrow_right.svg");
+}
+
+.slick-prev:before {
+  content: url("../assets/svg/arrow_left.svg");
+}
+
+.slick-prev,
+.slick-next {
+  top: 100%;
+  z-index: 3;
+}
+
+.slick-next {
+  right: 5%;
+}
+
+.slick-prev {
+  left: 90%;
+}
+
 .welcome-description {
   font-family: RobotoLight, sans-serif;
   font-style: normal;
@@ -258,7 +284,7 @@ h1 {
   align-items: center;
   position: absolute;
   right: -4px;
-  bottom: -60px;
+  bottom: -55px;
   padding: 40px 75px;
   background-color: var(--bg-dark);
   font-family: Roboto, sans-serif;
@@ -270,7 +296,7 @@ h1 {
   display: flex;
   width: 180px;
   justify-content: space-between;
-  margin: 0 60px 0 55px;
+  margin: 0 215px 0 55px;
 }
 
 .slider-item {
