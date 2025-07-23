@@ -112,14 +112,26 @@ h1 {
   display: flex;
 }
 
-.nav-list {
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.close {
+  display: none;
+  cursor: pointer;
+}
+
+.nav-list,
+.menu-items {
   display: flex;
   list-style: none;
   justify-content: flex-end;
   flex-wrap: wrap;
 }
 
-.nav-item {
+.nav-item,
+.menu-item {
   list-style: none;
   transition: 1s;
 }
@@ -149,11 +161,6 @@ h1 {
 }
 
 .welcome-container {
-  /* display: flex;
-  justify-content: space-between;
-  text-align: center;
-  position: relative; */
-
   display: block;
   text-align: -webkit-right;
   position: relative;
@@ -308,10 +315,6 @@ h1 {
 
 .active {
   background: #d2b183;
-}
-
-.slider-arrows {
-  display: flex;
 }
 
 .arrow-left {
@@ -822,4 +825,110 @@ h1 {
 
 .footer-username:hover {
   transform: scale(1.1);
+}
+
+@media (max-width: 1024px) {
+  /* :root {
+    --font1: 50px;
+    --padding: 60px;
+    }
+     .map {
+    width: calc(100vw - 330px);
+    height: calc(65vw - 212px);
+  }
+  .card {
+    width: 330px;
+  } */
+
+  .header-menu {
+    display: none;
+  }
+
+  .menu-items {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .header-menu.open {
+    left: 0;
+  }
+
+  .header-menu {
+    position: absolute;
+    /* top: 64px; */
+    left: -420px;
+    /* width: 320px; */
+    max-width: 90vw;
+    height: calc(100vh - 64px); */
+     /* background: #222; */
+    box-shadow: 2px 0 12px rgba(0, 0, 0, 0.09);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    transition: left 0.5s;
+    z-index: 10;
+
+    /* /* position: absolute; */
+    width: 297px;
+    /* height: 585px; */
+    /* left: 0px; */
+    top: 130px; 
+
+    background: #030303;
+    border-radius: 0px;
+  }
+
+  .header-menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    list-style: none;
+    margin: 48px 0 0 0;
+    padding: 0 32px;
+  }
+  .header-menu li a {
+    color: #fff;
+    font-size: 1.3em;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .menu.close {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  /* :root {
+    --font1: 40px;
+    --padding: 40px;
+  }
+
+    .gallery-img {
+    width: calc(50% - 12px);
+  }
+
+  .card {
+    width: 280px;
+  } */
+}
+
+@media (max-width: 420px) {
+  /* :root {
+    --font1: 40px;
+    --padding: 40px;
+  }
+
+    .gallery-img {
+    width: calc(50% - 12px);
+  }
+
+  .card {
+    width: 280px;
+  } */
 }
