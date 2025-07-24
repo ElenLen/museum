@@ -1,6 +1,6 @@
 $(document).ready(function () {
   const burgerMenu = document.getElementById("burger");
-  const mobileMenu = document.getElementById("menu");
+  const mobileMenu = document.getElementById("burger-menu");
   const closeMenu = document.getElementById("close");
 
   burgerMenu.addEventListener("click", function () {
