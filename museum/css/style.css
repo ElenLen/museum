@@ -350,8 +350,8 @@ h1 {
 }
 
 .visiting-img {
-  width: 440px;
-  height: 285px;
+  max-width: 440px;
+  max-height: 285px;
 }
 
 .visiting-title {
@@ -518,7 +518,7 @@ h1 {
 }
 
 .gallery-column {
-  width: 456px;
+  max-width: 456px;
 }
 
 .gallery-item img {
@@ -621,7 +621,7 @@ h1 {
   justify-content: space-around;
   align-items: center;
   box-sizing: border-box;
-  width: 150px;
+  max-width: 150px;
   height: 50px;
   border: 3px solid var(--font-black);
   margin-bottom: 10px;
@@ -848,16 +848,8 @@ h1 {
   }
 
   .header-container {
-    padding-top: 49px;
+    padding-top: 50px;
   }
-
-  /* .section {
-    padding: 60px 0;
-  }
-
-  .section {
-  padding: var(--padding-y) 0;
-} */
 
   .header-menu {
     display: none;
@@ -879,14 +871,14 @@ h1 {
   .burger-menu {
     position: absolute;
     left: -420px;
-    height: calc(50vh - 50px);
+    height: 525px;
     box-shadow: 2px 0 12px rgba(0, 0, 0, 0.09);
     display: flex;
     flex-direction: column;
     transition: left 0.5s;
     z-index: 10;
-    width: 40%;
-    top: 130px;
+    width: 390px;
+    top: 125px;
     background: #030303;
   }
 
@@ -926,7 +918,7 @@ h1 {
     padding-top: 49px;
   }
 
-  .section-title {
+  .welcome-title {
     max-width: 396px;
   }
 
@@ -963,6 +955,164 @@ h1 {
 
   .slick-prev {
     left: 88%;
+  }
+
+  .slider-item {
+    width: 12px;
+    height: 12px;
+  }
+
+  .welcome-slider {
+    font-size: 20px;
+  }
+
+  .underline-title::after {
+    bottom: -20px;
+  }
+
+  .visiting-items {
+    margin: 83px 108px 0 108px;
+    column-gap: 108px;
+    row-gap: 60px;
+  }
+
+  .visiting-img {
+    max-width: 330px;
+    max-height: 215px;
+  }
+
+  .visiting-title {
+    font-size: 28px;
+    line-height: 31px;
+    letter-spacing: 3px;
+  }
+
+  .visiting-text {
+    font-size: 20px;
+    line-height: 23px;
+  }
+
+  .explore-title {
+    margin-bottom: 83px;
+  }
+
+  .explore-container {
+    justify-content: center;
+  }
+
+  .explore-description {
+    max-width: fit-content;
+    margin-right: 0;
+  }
+
+  .explore-text {
+    font-size: 20px;
+    margin-top: 0;
+  }
+
+  .explore-image {
+    margin-top: 62px;
+  }
+
+  .no-visible {
+    display: none;
+  }
+
+  .section-title {
+    line-height: 75px;
+  }
+
+  .video-description {
+    margin-bottom: 40px;
+  }
+
+  .gallery-items {
+    margin-top: 60px;
+    max-height: 1265px;
+  }
+
+  .tikets-items {
+    display: flex;
+    margin-top: 83px;
+    max-height: 440px;
+    overflow: hidden;
+  }
+
+  .tikets-items img {
+    width: 100%;
+    height: 100%;
+    margin-right: 80px;
+  }
+
+  .tikets-price {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .tiket-title {
+    margin-bottom: 25px;
+  }
+
+  .tiket-amount {
+    max-width: 175px;
+    margin-bottom: 25px;
+    margin-top: 10px;
+  }
+
+  .tiket-total {
+    margin: 0;
+  }
+
+  .contacts-items {
+    margin-top: 83px;
+  }
+
+  .contacts-title {
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 35px;
+  }
+
+  .contacts-text {
+    font-size: 20px;
+    line-height: 23px;
+    margin-bottom: 15px;
+  }
+
+  .contacts-item.img {
+    max-width: 694px;
+  }
+
+  .footer {
+    padding: 40px 0 50px 0;
+  }
+
+  .footer-logo {
+    align-items: flex-start;
+    margin-right: 45px;
+    margin-top: 20px;
+  }
+
+  .footer-nav-list {
+    justify-content: flex-start;
+    max-width: 300px;
+  }
+
+  .footer-nav-item {
+    margin-bottom: 0;
+    max-width: 50px;
+    margin-right: 100px;
+    margin-top: 25px;
+  }
+
+  .footer-nav-link {
+    margin-left: 0;
+    margin-right: 50px;
+  }
+
+  .footer-menu {
+    margin-top: 0;
   }
 }
 

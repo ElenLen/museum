@@ -111,7 +111,7 @@
           <h2 class="section-title dark-title welcome-title">Welcome to the Louvre</h2>
           <p class="welcome-description">From the castle to the museum</p>
           <a href="https://www.google.com/maps/@48.8618159,2.3366818,3a,75y,81.55h,73.4t/data=!3m7!1e1!3m5!1sAF1QipOVxZQuSy3Bx9T_HpH_7FtBHDTXvI6SF-A10ocT!2e10!3e12!7i5472!8i2736"
-            target="_blank" class="btn welcome-btn">Discover the Louvre</a>
+            target="_blank" class="button welcome-btn">Discover the Louvre</a>
         </div>
 
         <div class="welcome-image">
@@ -212,7 +212,8 @@
             gathered since the previous
             restoration
             in the 19th century.</p>
-          <p class="explore-text">The cleaning provoked furious protests, not because the picture had been damaged in
+          <p class="explore-text no-visible">The cleaning provoked furious protests, not because the picture had been
+            damaged in
             any way, but because it
             looked different.</p>
         </div>
@@ -224,7 +225,7 @@
       <div class="container  video-container">
         <div class="video-description">
           <h2 class="section-title light-title ">Video journey</h2>
-          <p class="video-text">Enter and visit one of the most famous museums in the world and enjoy
+          <p class="video-text no-visible ">Enter and visit one of the most famous museums in the world and enjoy
             masterpieces such as Mona Lisa or Hammurabi's Code</p>
         </div>
         <div class="video-player">
@@ -320,7 +321,7 @@
         <div class="tikets-items">
           <img src="./assets/img/tikets.jpg" alt="tikets">
 
-          <div class="tikets-description">
+          <div class="tikets-description no-visible">
             <h4 class="tiket-title">Ticket Type</h4>
 
             <label class="tiket-item">
@@ -347,22 +348,30 @@
           </div>
 
           <div class="tikets-price">
-            <h4 class="tiket-title">Amount</h4>
-            <p class="tiket-amount-text">Basic 18+</p>
-            <div class="tiket-amount">
-              <button class="ticket-btn" type="button" onclick="this.nextElementSibling.stepDown()">–</button>
-              <input type="number" min="0" max="20" value="1" readonly class="tiket-count">
-              <button class="ticket-btn" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
+            <div class="tiket-block-total">
+              <h4 class="tiket-title">Amount</h4>
+              <label class="tiket-amount-text">Basic 18+
+                <div class="tiket-amount">
+                  <button class="ticket-btn" type="button" onclick="this.nextElementSibling.stepDown()">–</button>
+                  <input type="number" min="0" max="20" value="1" readonly class="tiket-count">
+                  <button class="ticket-btn" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
+                </div>
+              </label>
+
+              <label class="tiket-amount-text">Senior 65+
+                <div class="tiket-amount">
+                  <button class="ticket-btn" type="button" onclick="this.nextElementSibling.stepDown()">–</button>
+                  <input type="number" min="0" max="20" value="1" readonly class="tiket-count">
+                  <button class="ticket-btn" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
+                </div>
+              </label>
+
+              <p class="tiket-total">Total €220</p>
+
             </div>
-            <p class="tiket-amount-text">Senior 65+</p>
-            <div class="tiket-amount">
-              <button class="ticket-btn" type="button" onclick="this.nextElementSibling.stepDown()">–</button>
-              <input type="number" min="0" max="20" value="1" readonly class="tiket-count">
-              <button class="ticket-btn" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
-            </div>
-            <p class="tiket-total">Total €220</p>
             <button class="tiket-pay">Buy Now</button>
           </div>
+
         </div>
       </div>
     </section>
