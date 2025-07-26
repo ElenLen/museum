@@ -1117,11 +1117,11 @@ h1 {
 }
 
 @media (max-width: 768px) {
-  /* :root {
+  :root {
     --font1: 40px;
-    --padding: 40px;
+    --padding-y: 40px;
   }
-
+  /* 
     .gallery-img {
     width: calc(50% - 12px);
   }
@@ -1129,6 +1129,85 @@ h1 {
   .card {
     width: 280px;
   } */
+
+  .logo-text {
+    line-height: 50px;
+  }
+
+  .container {
+    max-width: 728px;
+  }
+
+  .welcome-container {
+    align-content: center;
+    align-items: center;
+  }
+
+  .header-container {
+    padding-top: 35px;
+    position: unset;
+  }
+
+  .welcome-section {
+    padding-top: 34px;
+  }
+
+  .welcome-title {
+    max-width: 328px;
+    height: 120px;
+    line-height: 60px;
+    text-align: center;
+  }
+
+  .welcome-text {
+    margin-top: 0;
+    position: unset;
+    background-color: unset;
+    box-shadow: unset;
+    align-items: center;
+    text-align: -webkit-center;
+  }
+
+  .welcome-description {
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .welcome-btn {
+    display: none;
+  }
+
+  .slick-slide img {
+    max-width: 728px;
+  }
+
+  .welcome-slider {
+    justify-content: center;
+    align-items: center;
+    position: unset;
+    padding: 0;
+    padding-top: 30px;
+  }
+
+  .slick-prev {
+    left: 70%;
+  }
+
+  .slick-next {
+    right: 20%;
+  }
+
+  .slick-prev,
+  .slick-next {
+    top: 108%;
+  }
+
+  .burger-menu {
+    width: 230px;
+    height: 350px;
+  }
 }
 
 @media (max-width: 420px) {
