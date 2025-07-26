@@ -513,7 +513,8 @@ h1 {
   max-height: 1950px;
 }
 
-.block1 {
+.block1,
+.block3 {
   margin-top: 50px;
 }
 
@@ -1207,6 +1208,177 @@ h1 {
   .burger-menu {
     width: 230px;
     height: 350px;
+  }
+
+  .section-title {
+    line-height: 60px;
+  }
+
+  .visiting-items {
+    margin: 63px 56px 40px 56px;
+    column-gap: 56px;
+    row-gap: 40px;
+  }
+
+  .visiting-img {
+    max-width: 280px;
+    max-height: 180px;
+  }
+
+  .visiting-title {
+    font-size: 22px;
+    line-height: 24px;
+  }
+
+  .underline-title3::after {
+    width: 150px;
+    height: 2px;
+  }
+
+  .visiting-text {
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+  .explore-container {
+    flex-direction: column;
+  }
+
+  .explore-text {
+    display: none;
+  }
+
+  .explore-description {
+    max-width: 100%;
+  }
+
+  .explore-title {
+    margin-bottom: 0;
+  }
+
+  .explore-image {
+    margin-top: 63px;
+    max-width: 728px;
+  }
+
+  .video-description {
+    margin-bottom: 20px;
+  }
+
+  .video-section {
+    padding-top: 40px;
+  }
+
+  .poster3 {
+    display: none;
+  }
+
+  .video-posters {
+    margin-top: 20px;
+    column-gap: 20px;
+  }
+
+  .video-poster {
+    width: calc(100% / 2 - 10px);
+  }
+
+  .video-slider {
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+
+  .gallery-items {
+    margin-top: 40px;
+  }
+
+  .block3 {
+    display: none;
+  }
+
+  .block2 {
+    margin-right: 0;
+    margin-left: 24px;
+  }
+
+  .gallery-items {
+    max-height: 1165px;
+  }
+
+  .tikets-items {
+    margin-top: 63px;
+    max-height: max-content;
+    overflow: unset;
+    justify-content: flex-start;
+  }
+
+  .tikets-items img {
+    width: calc(100% / 2 + 80px);
+    margin-right: 60px;
+  }
+
+  .tiket-title {
+    margin-bottom: 39px;
+  }
+
+  .tiket-total {
+    margin-top: 14px;
+    margin-bottom: 40px;
+  }
+
+  .tikets-price {
+    align-items: stretch;
+  }
+
+  .contacts-items {
+    margin-top: 63px;
+    flex-direction: column;
+  }
+
+  .contacts-title {
+    max-width: 155px;
+    margin-bottom: 40px;
+    font-size: 20px;
+    line-height: 23px;
+  }
+
+  .contacts-text {
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+  .contacts-item {
+    margin-bottom: 25px;
+  }
+
+  .footer-navigation {
+    padding-bottom: 40px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .logo {
+    margin-top: 10px;
+  }
+
+  .footer-logo {
+    margin-top: 0;
+    margin-right: 80px;
+  }
+
+  .footer-nav-list {
+    max-width: 393px;
+  }
+
+  .footer-nav-item {
+    margin-bottom: 25px;
+    max-width: 85px;
+    margin-right: 53px;
+    margin-top: 0;
+  }
+
+  .footer-socials {
+    margin-left: 270px;
+    margin-top: 17px;
   }
 }
 
