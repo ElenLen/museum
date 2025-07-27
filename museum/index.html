@@ -319,7 +319,9 @@
       <div class="container">
         <h2 class="section-title light-title underline-title">BUY TICKETS</h2>
         <div class="tikets-items">
-          <img src="./assets/img/tikets.jpg" alt="tikets">
+          <div class="tiket-image">
+            <img src="./assets/img/tikets.jpg" alt="tikets">
+          </div>
 
           <div class="tikets-description no-visible">
             <h4 class="tiket-title">Ticket Type</h4>
@@ -350,21 +352,19 @@
           <div class="tikets-price">
             <div class="tiket-block-total">
               <h4 class="tiket-title">Amount</h4>
-              <label class="tiket-amount-text">Basic 18+
-                <div class="tiket-amount">
-                  <button class="ticket-btn" type="button" onclick="this.nextElementSibling.stepDown()">–</button>
-                  <input type="number" min="0" max="20" value="1" readonly class="tiket-count">
-                  <button class="ticket-btn" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
-                </div>
-              </label>
+              <p class="tiket-amount-text">Basic 18+</p>
+              <div class="tiket-amount">
+                <button class="ticket-btn" type="button" onclick="this.nextElementSibling.stepDown()">–</button>
+                <input type="number" min="0" max="20" value="1" readonly class="tiket-count">
+                <button class="ticket-btn" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
+              </div>
 
-              <label class="tiket-amount-text">Senior 65+
-                <div class="tiket-amount">
-                  <button class="ticket-btn" type="button" onclick="this.nextElementSibling.stepDown()">–</button>
-                  <input type="number" min="0" max="20" value="1" readonly class="tiket-count">
-                  <button class="ticket-btn" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
-                </div>
-              </label>
+              <p class="tiket-amount-text">Senior 65+</p>
+              <div class="tiket-amount">
+                <button class="ticket-btn" type="button" onclick="this.nextElementSibling.stepDown()">–</button>
+                <input type="number" min="0" max="20" value="1" readonly class="tiket-count">
+                <button class="ticket-btn" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
+              </div>
 
               <p class="tiket-total">Total €220</p>
 
@@ -442,7 +442,7 @@
           </ul>
         </nav>
         <div class="footer-socials">
-          <ul class="nav-list">
+          <ul class="nav-list nav-list-social">
             <li class="nav-item socials-nav-item">
               <a href="#https://www.youtube.com/user/louvre" class="socials-nav-link">
                 <svg class="socials-svg" width="24" height="24" viewBox="0 0 24 24" fill="white"
@@ -494,7 +494,7 @@
 
       <div class="footer-discription">
         <p class="footer-discription-text">© 2025</p>
-        <p class="footer-discription-text">The Rolling Scopes School</p>
+        <p class="footer-discription-text discription-text-school">The Rolling Scopes School</p>
         <p class="footer-discription-text footer-username">@ElenLen</p>
       </div>
     </div>

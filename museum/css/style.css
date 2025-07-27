@@ -37,6 +37,7 @@
 * {
   margin: 0;
   padding: 0;
+  border: 0;
   /* border: 1px solid red; */
 }
 
@@ -54,6 +55,8 @@ html {
 
 h1 {
   display: none;
+  background-color: var(--font-black);
+  border: 0;
 }
 
 .dark-section,
@@ -101,7 +104,6 @@ h1 {
   font-style: normal;
   font-weight: 400;
   font-size: 28px;
-  line-height: 31px;
   letter-spacing: 5px;
   text-transform: uppercase;
   color: var(--font-white);
@@ -340,7 +342,7 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   margin-top: 103px;
-  column-gap: 60px;
+  column-gap: 50px;
   row-gap: 75px;
 }
 
@@ -428,7 +430,7 @@ h1 {
 
 .explore-image {
   margin-top: 15px;
-  max-width: 720px;
+  max-width: 715px;
 }
 
 .video-description {
@@ -535,11 +537,6 @@ h1 {
   display: flex;
   margin-top: 103px;
   justify-content: space-between;
-}
-
-.tikets-items img {
-  width: 50%;
-  height: 50%;
 }
 
 .tikets-description {
@@ -760,6 +757,11 @@ h1 {
 .footer-socials {
   display: flex;
   align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.nav-list-social {
+  flex-wrap: nowrap;
 }
 
 .socials-nav-item {
@@ -826,11 +828,40 @@ h1 {
 
 .footer-username {
   transition: 1s;
-  cursor: pointer;
 }
 
 .footer-username:hover {
   transform: scale(1.1);
+}
+
+@media (max-width: 1440px) {
+  .container {
+    margin: 0 20px;
+  }
+
+  .slick-slide img {
+    width: 70%;
+  }
+
+  .visiting-items {
+    column-gap: 0;
+    width: 100%;
+    justify-content: space-around;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .explore-container {
+    justify-content: center;
+  }
+
+  .tikets-description {
+    margin-left: 30px;
+  }
+
+  .tiket-image img {
+    width: 100%;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -839,13 +870,8 @@ h1 {
     --padding-y: 60px;
   }
 
-  /* .map {
-    width: calc(100vw - 330px);
-    height: calc(65vw - 212px);
-  } */
-
   .container {
-    max-width: 984px;
+    margin: 0 20px;
   }
 
   .header-container {
@@ -867,6 +893,7 @@ h1 {
 
   .burger-menu.open {
     left: 0;
+    border-radius: 5%;
   }
 
   .burger-menu {
@@ -972,9 +999,10 @@ h1 {
   }
 
   .visiting-items {
-    margin: 83px 108px 0 108px;
+    margin-top: 83px;
     column-gap: 108px;
     row-gap: 60px;
+    justify-content: center;
   }
 
   .visiting-img {
@@ -1039,9 +1067,8 @@ h1 {
     overflow: hidden;
   }
 
-  .tikets-items img {
-    width: 100%;
-    height: 100%;
+  .tiket-image {
+    align-self: center;
     margin-right: 80px;
   }
 
@@ -1122,22 +1149,6 @@ h1 {
     --font1: 40px;
     --padding-y: 40px;
   }
-  /* 
-    .gallery-img {
-    width: calc(50% - 12px);
-  }
-
-  .card {
-    width: 280px;
-  } */
-
-  .logo-text {
-    line-height: 50px;
-  }
-
-  .container {
-    max-width: 728px;
-  }
 
   .welcome-container {
     align-content: center;
@@ -1150,7 +1161,7 @@ h1 {
   }
 
   .welcome-section {
-    padding-top: 34px;
+    padding-top: 35px;
   }
 
   .welcome-title {
@@ -1181,7 +1192,7 @@ h1 {
   }
 
   .slick-slide img {
-    max-width: 728px;
+    width: 100%;
   }
 
   .welcome-slider {
@@ -1215,7 +1226,7 @@ h1 {
   }
 
   .visiting-items {
-    margin: 63px 56px 40px 56px;
+    margin: 63px 0 40px 0;
     column-gap: 56px;
     row-gap: 40px;
   }
@@ -1258,7 +1269,7 @@ h1 {
 
   .explore-image {
     margin-top: 63px;
-    max-width: 728px;
+    max-width: 100%;
   }
 
   .video-description {
@@ -1309,11 +1320,13 @@ h1 {
     max-height: max-content;
     overflow: unset;
     justify-content: flex-start;
+    flex-wrap: wrap;
   }
 
-  .tikets-items img {
-    width: calc(100% / 2 + 80px);
+  .tiket-image {
+    max-width: calc(100% / 2 + 60px);
     margin-right: 60px;
+    align-self: unset;
   }
 
   .tiket-title {
@@ -1356,10 +1369,6 @@ h1 {
     justify-content: flex-start;
   }
 
-  .logo {
-    margin-top: 10px;
-  }
-
   .footer-logo {
     margin-top: 0;
     margin-right: 80px;
@@ -1382,17 +1391,260 @@ h1 {
   }
 }
 
+@media (max-width: 640px) {
+  .tikets-items {
+    justify-content: center;
+  }
+
+  .tiket-image {
+    margin-right: 20px;
+  }
+
+  .footer-menu {
+    margin-top: 30px;
+  }
+
+  .footer-socials {
+    margin-left: 0;
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 580px) {
+  .slick-prev,
+  .slick-next {
+    top: 110%;
+  }
+
+  .slick-next {
+    right: 12%;
+  }
+
+  .slick-prev {
+    left: 75%;
+  }
+}
+
 @media (max-width: 420px) {
-  /* :root {
-    --font1: 40px;
-    --padding: 40px;
+  :root {
+    --font1: 28px;
   }
 
-    .gallery-img {
-    width: calc(50% - 12px);
+  .welcome-title {
+    max-width: 248px;
+    line-height: 40px;
+    height: auto;
   }
 
-  .card {
-    width: 280px;
-  } */
+  .welcome-description {
+    font-size: 16px;
+    line-height: 19px;
+    margin-top: 25px;
+  }
+
+  .welcome-slider {
+    font-size: 16px;
+    padding-top: 20px;
+  }
+
+  .slider-item {
+    width: 7px;
+    height: 7px;
+  }
+
+  .slider-list {
+    margin: 0 50px 0 25px;
+    width: 75px;
+  }
+
+  .slick-prev,
+  .slick-next {
+    top: 109%;
+  }
+
+  .slick-next {
+    right: 12%;
+  }
+
+  .burger-menu.open {
+    top: 72px;
+  }
+
+  .visiting-items {
+    margin: 63px 0 40px 0;
+    justify-content: center;
+  }
+
+  .visiting-title {
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  .visiting-text {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .video-posters {
+    margin: 40px 0;
+  }
+
+  .video-slider {
+    margin: 0;
+  }
+
+  .circle-slider {
+    width: 8px;
+    height: 8px;
+  }
+
+  .double-arrows-left,
+  .double-arrows-right {
+    width: 7px;
+    height: 8px;
+  }
+
+  .gallery-items {
+    max-height: 677px;
+  }
+
+  .tiket-image {
+    max-width: 380px;
+    max-height: 160px;
+    overflow: hidden;
+    margin-right: 0px;
+  }
+
+  .tiket-image img {
+    position: relative;
+    top: -65px;
+  }
+
+  .tikets-items {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tiket-block-total {
+    padding: 40px 0;
+  }
+
+  .tiket-title {
+    text-align: center;
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 20px;
+  }
+
+  .tiket-amount-text {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .tiket-amount {
+    margin-bottom: 20px;
+    margin-top: 15px;
+  }
+
+  .tiket-total {
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0px;
+  }
+
+  .tiket-pay {
+    font-size: 16px;
+    line-height: 0px;
+  }
+
+  .contacts-title {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .contacts-text a {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .contacts-item {
+    margin-bottom: 0;
+  }
+
+  .contacts-map {
+    margin-top: 25px;
+  }
+
+  .footer-logo {
+    margin: 0;
+  }
+
+  .logo {
+    width: 29px;
+    height: 16px;
+  }
+
+  .logo-text {
+    font-size: 16px;
+    line-height: 30px;
+  }
+
+  .footer-menu {
+    margin: 40px 0 15px 0;
+  }
+
+  .footer-nav-link {
+    font-size: 16px;
+    line-height: 19px;
+    margin-right: 0;
+  }
+
+  .footer-navigation {
+    flex-direction: column;
+  }
+
+  .footer-socials {
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+
+  .socials-nav-item {
+    margin-left: 5px;
+  }
+
+  .footer::after {
+    bottom: 135px;
+    height: 2px;
+  }
+
+  .footer-discription {
+    margin-top: 40px;
+  }
+
+  .footer-discription-text {
+    font-size: 16px;
+  }
+
+  .discription-text-school {
+    display: none;
+  }
+}
+
+@media (max-width: 370px) {
+  .slick-prev,
+  .slick-next {
+    top: 112%;
+  }
+
+  .slick-next {
+    right: 5%;
+  }
+
+  .slick-prev {
+    left: 74%;
+  }
 }
