@@ -4,6 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/slick.css">
+  <link rel="stylesheet" href="./css/slick-theme.css">
+
   <link rel="stylesheet" href="./css/style.css">
   <link rel="icon" href="./assets/favicon.ico">
   <title>Museum</title>
@@ -28,28 +31,75 @@
         <div class="logo-text">Louvre</div>
       </div>
 
-      <nav class="header-menu">
-        <ul class="nav-list">
-          <li class="nav-item">
+      <nav class="header-menu" id="menu">
+        <ul class="menu-items">
+          <li class=" menu-item">
             <a href="#visiting" class="nav-link">Visiting</a>
           </li>
-          <li class="nav-item">
+          <li class=" menu-item">
             <a href="#explore" class="nav-link">Explore</a>
           </li>
-          <li class="nav-item">
+          <li class=" menu-item">
             <a href="#video" class="nav-link">Video</a>
           </li>
-          <li class="nav-item">
+          <li class=" menu-item">
             <a href="#gallery" class="nav-link">Gallery</a>
           </li>
-          <li class="nav-item">
+          <li class=" menu-item">
             <a href="#tickets" class="nav-link">Tickets</a>
           </li>
-          <li class="nav-item">
+          <li class=" menu-item">
             <a href="#contacts" class="nav-link">Contacts</a>
           </li>
         </ul>
       </nav>
+
+
+      <nav class="burger-menu" id="burger-menu">
+        <ul class="burger-menu-items">
+          <li class="burger-menu-item">
+            <a href="#visiting" class="nav-link">Visiting</a>
+            <img src="./assets/svg/arrow.svg" alt="arrow">
+          </li>
+          <li class="burger-menu-item">
+            <a href="#explore" class="nav-link">Explore</a>
+            <img src="./assets/svg/arrow.svg" alt="arrow">
+          </li>
+          <li class="burger-menu-item">
+            <a href="#video" class="nav-link">Video</a>
+            <img src="./assets/svg/arrow.svg" alt="arrow">
+          </li>
+          <li class="  burger-menu-item">
+            <a href="#gallery" class="nav-link">Gallery</a>
+            <img src="./assets/svg/arrow.svg" alt="arrow">
+          </li>
+          <li class=" burger-menu-item">
+            <a href="#tickets" class="nav-link">Tickets</a>
+            <img src="./assets/svg/arrow.svg" alt="arrow">
+          </li>
+          <li class=" burger-menu-item">
+            <a href="#contacts" class="nav-link">Contacts</a>
+            <img src="./assets/svg/arrow.svg" alt="arrow">
+          </li>
+        </ul>
+      </nav>
+
+      <div class="burger" id="burger">
+        <svg width="32" height="18" viewBox="0 0 32 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="32" height="2" fill="white" />
+          <rect y="8" width="32" height="2" fill="white" />
+          <rect y="16" width="32" height="2" fill="white" />
+        </svg>
+      </div>
+
+      <div class="close" id="close">
+        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="33.2612" height="2.07882" transform="matrix(0.7068 0.707413 -0.7068 0.707413 1.47046 0)"
+            fill="white" />
+          <rect width="33.2612" height="2.07883" transform="matrix(0.707413 -0.706801 0.707413 0.706801 0 23.5093)"
+            fill="white" />
+        </svg>
+      </div>
     </div>
   </header>
 
@@ -61,33 +111,38 @@
           <h2 class="section-title dark-title welcome-title">Welcome to the Louvre</h2>
           <p class="welcome-description">From the castle to the museum</p>
           <a href="https://www.google.com/maps/@48.8618159,2.3366818,3a,75y,81.55h,73.4t/data=!3m7!1e1!3m5!1sAF1QipOVxZQuSy3Bx9T_HpH_7FtBHDTXvI6SF-A10ocT!2e10!3e12!7i5472!8i2736"
-            target="_blank" class="btn welcome-btn">Discover the Louvre</a>
+            target="_blank" class="button welcome-btn">Discover the Louvre</a>
         </div>
+
         <div class="welcome-image">
-          <img src="./assets/img/welcome-slider/1.jpg" class="louvre-image" alt="Louvre Museum">
-          <div class="welcome-slider">
-            <div class="slider-pages">01 | 05</div>
-            <div class="slider-list">
-              <div class="slider-item active"></div>
-              <div class="slider-item "></div>
-              <div class="slider-item "></div>
-              <div class="slider-item "></div>
-              <div class="slider-item "></div>
-            </div>
-            <div class="slider-arrows">
-              <svg class="arrow-left" width="30" height="8" viewBox="0 0 30 8" fill="white"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M5.72254 8C3.90173 6.31339 1.99422 5.08262 0 4.30769V3.69231C1.99422 2.89459 3.90173 1.66382 5.72254 0H7.23988C6.37283 1.4359 5.53468 2.52991 4.72543 3.28205H30V4.71795H4.72543C5.53468 5.47009 6.37283 6.5641 7.23988 8H5.72254Z" />
-              </svg>
-              <svg class="arrow-right" width="30" height="8" viewBox="0 0 30 8" fill="white"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M24.2775 1.97284e-06C26.0983 1.68661 28.0058 2.91738 30 3.69231L30 4.30769C28.0058 5.10541 26.0983 6.33618 24.2775 8L22.7601 8C23.6272 6.5641 24.4653 5.47009 25.2746 4.71795L3.48964e-07 4.71795L5.01636e-07 3.28205L25.2746 3.28205C24.4653 2.52992 23.6272 1.4359 22.7601 1.86378e-06L24.2775 1.97284e-06Z" />
-              </svg>
-            </div>
+          <div>
+            <img src="./assets/img/welcome-slider/1.jpg" class="d-md-block w-100 " alt="Louvre Museum1">
+          </div>
+          <div>
+            <img src="./assets/img/welcome-slider/2.jpg" class="d-md-block w-100 " alt="Louvre Museum2">
+          </div>
+          <div>
+            <img src="./assets/img/welcome-slider/3.jpg" class="d-md-block w-100 " alt="Louvre Museum3">
+          </div>
+          <div>
+            <img src="./assets/img/welcome-slider/4.jpg" class="d-md-block w-100 " alt="Louvre Museum4">
+          </div>
+          <div>
+            <img src="./assets/img/welcome-slider/5.jpg" class="d-md-block w-100 " alt="Louvre Museum5">
           </div>
         </div>
+
+        <div class="welcome-slider">
+          <div class="slider-pages">01 | 0<span id="numSlider">5</span></div>
+          <div class="slider-list">
+            <div class="slider-item active"></div>
+            <div class="slider-item "></div>
+            <div class="slider-item "></div>
+            <div class="slider-item "></div>
+            <div class="slider-item "></div>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -157,7 +212,8 @@
             gathered since the previous
             restoration
             in the 19th century.</p>
-          <p class="explore-text">The cleaning provoked furious protests, not because the picture had been damaged in
+          <p class="explore-text no-visible">The cleaning provoked furious protests, not because the picture had been
+            damaged in
             any way, but because it
             looked different.</p>
         </div>
@@ -169,7 +225,7 @@
       <div class="container  video-container">
         <div class="video-description">
           <h2 class="section-title light-title ">Video journey</h2>
-          <p class="video-text">Enter and visit one of the most famous museums in the world and enjoy
+          <p class="video-text no-visible ">Enter and visit one of the most famous museums in the world and enjoy
             masterpieces such as Mona Lisa or Hammurabi's Code</p>
         </div>
         <div class="video-player">
@@ -184,7 +240,7 @@
           <video src="./assets/video/video2.mp4" poster="./assets/img/video-section/videoSlide2.png" controls
             class="video-poster"></video>
           <video src="./assets/video/video3.mp4" poster="./assets/img/video-section/videoSlide3.png" controls
-            class="video-poster"></video>
+            class="video-poster poster3"></video>
         </div>
 
         <div class="video-slider">
@@ -241,7 +297,7 @@
             </a>
           </div>
 
-          <div class="gallery-column block1">
+          <div class="gallery-column block3">
             <a href="./assets/img/galery/galery7.jpg" target="_blank" class="gallery-item">
               <img src="./assets/img/galery/galery7.jpg" alt="Gallery Image 7">
             </a>
@@ -263,9 +319,11 @@
       <div class="container">
         <h2 class="section-title light-title underline-title">BUY TICKETS</h2>
         <div class="tikets-items">
-          <img src="./assets/img/tikets.jpg" alt="tikets">
+          <div class="tiket-image">
+            <img src="./assets/img/tikets.jpg" alt="tikets">
+          </div>
 
-          <div class="tikets-description">
+          <div class="tikets-description no-visible">
             <h4 class="tiket-title">Ticket Type</h4>
 
             <label class="tiket-item">
@@ -292,22 +350,28 @@
           </div>
 
           <div class="tikets-price">
-            <h4 class="tiket-title">Amount</h4>
-            <p class="tiket-amount-text">Basic 18+</p>
-            <div class="tiket-amount">
-              <button class="ticket-btn" type="button" onclick="this.nextElementSibling.stepDown()">–</button>
-              <input type="number" min="0" max="20" value="1" readonly class="tiket-count">
-              <button class="ticket-btn" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
+            <div class="tiket-block-total">
+              <h4 class="tiket-title">Amount</h4>
+              <p class="tiket-amount-text">Basic 18+</p>
+              <div class="tiket-amount">
+                <button class="ticket-btn" type="button" onclick="this.nextElementSibling.stepDown()">–</button>
+                <input type="number" min="0" max="20" value="1" readonly class="tiket-count">
+                <button class="ticket-btn" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
+              </div>
+
+              <p class="tiket-amount-text">Senior 65+</p>
+              <div class="tiket-amount">
+                <button class="ticket-btn" type="button" onclick="this.nextElementSibling.stepDown()">–</button>
+                <input type="number" min="0" max="20" value="1" readonly class="tiket-count">
+                <button class="ticket-btn" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
+              </div>
+
+              <p class="tiket-total">Total €220</p>
+
             </div>
-            <p class="tiket-amount-text">Senior 65+</p>
-            <div class="tiket-amount">
-              <button class="ticket-btn" type="button" onclick="this.nextElementSibling.stepDown()">–</button>
-              <input type="number" min="0" max="20" value="1" readonly class="tiket-count">
-              <button class="ticket-btn" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
-            </div>
-            <p class="tiket-total">Total €220</p>
             <button class="tiket-pay">Buy Now</button>
           </div>
+
         </div>
       </div>
     </section>
@@ -378,7 +442,7 @@
           </ul>
         </nav>
         <div class="footer-socials">
-          <ul class="nav-list">
+          <ul class="nav-list nav-list-social">
             <li class="nav-item socials-nav-item">
               <a href="#https://www.youtube.com/user/louvre" class="socials-nav-link">
                 <svg class="socials-svg" width="24" height="24" viewBox="0 0 24 24" fill="white"
@@ -430,13 +494,14 @@
 
       <div class="footer-discription">
         <p class="footer-discription-text">© 2025</p>
-        <p class="footer-discription-text">The Rolling Scopes School</p>
+        <p class="footer-discription-text discription-text-school">The Rolling Scopes School</p>
         <p class="footer-discription-text footer-username">@ElenLen</p>
       </div>
     </div>
   </footer>
 
   <script src="./js/jquery-3.7.1.min.js"></script>
+  <script src="./js/slick.min.js"></script>
   <script src="./js/parallax.min.js"></script>
   <script src="./js/index.js"></script>
 
