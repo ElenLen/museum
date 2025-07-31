@@ -318,6 +318,7 @@ h1 {
   width: 16px;
   height: 16px;
   background: var(--font-white);
+  cursor: pointer;
 }
 
 .active {
@@ -461,6 +462,7 @@ h1 {
 }
 
 .video-control {
+  display: none;
   width: 100%;
   position: absolute;
   right: 0;
@@ -492,6 +494,7 @@ h1 {
   height: 12px;
   background: #999999;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .double-arrows-left,
