@@ -1,34 +1,128 @@
 $(document).ready(function () {
-  const burgerMenu = document.getElementById("burger");
+  const burgerBtn = document.getElementById("burger");
   const mobileMenu = document.getElementById("burger-menu");
-  const closeMenu = document.getElementById("close");
+  const closeBtn = document.getElementById("close");
+  // const welcomeText = document.querySelector(".welcome-text");
 
-  burgerMenu.addEventListener("click", function () {
-    burgerMenu.classList.toggle("open");
+  //   const burgerBtn = document.getElementById('burgerBtn');
+  // const navMenu = document.getElementById('navMenu');
+
+  // Функция для закрытия меню
+  // function closeMenu() {
+  //   mobileMenu.classList.remove("open");
+  //   burgerBtn.classList.remove("active");
+  //   document.removeEventListener("mousedown", handleOutsideClick);
+  //   document.removeEventListener("scroll", closeMenu);
+  // }
+
+  // // Клик по бургеру
+  // burgerBtn.addEventListener("click", function (e) {
+  //   mobileMenu.classList.toggle("open");
+  //   burgerBtn.classList.toggle("active");
+  //   if (mobileMenu.classList.contains("open")) {
+  //     document.addEventListener("mousedown", handleOutsideClick);
+  //     document.addEventListener("scroll", closeMenu, { passive: true });
+  //   } else {
+  //     document.removeEventListener("mousedown", handleOutsideClick);
+  //     document.removeEventListener("scroll", closeMenu);
+  //   }
+  // });
+
+  // // Клик вне меню
+  // function handleOutsideClick(e) {
+  //   if (!mobileMenu.contains(e.target) && !burgerBtn.contains(e.target)) {
+  //     closeMenu();
+  //   }
+  // }
+
+  // // Клик по пункту меню (делегирование)
+  // mobileMenu.addEventListener("click", function (e) {
+  //   if (e.target.tagName === "A") {
+  //     // Переход по ссылке — закрываем меню
+  //     closeMenu();
+  //   }
+  // });
+
+  burgerBtn.addEventListener("click", function (e) {
     mobileMenu.classList.toggle("open");
-    burgerMenu.style.display = "none";
-    closeMenu.style.display = "block";
+    burgerBtn.classList.toggle("active");
+    burgerBtn.style.display = "none";
+    // welcomeText.style.display = "none";
+    closeBtn.style.display = "block";
+    if (mobileMenu.classList.contains("open")) {
+      document.addEventListener("mousedown", handleOutsideClick);
+      document.addEventListener("scroll", closeMenu);
+    } else {
+      document.removeEventListener("mousedown", handleOutsideClick);
+      document.addEventListener("scroll", closeMenu);
+    }
   });
 
-  closeMenu.addEventListener("click", function () {
-    burgerMenu.classList.remove("open");
-    mobileMenu.classList.remove("open");
-    burgerMenu.style.display = "block";
-    closeMenu.style.display = "none";
-  });
+  function handleOutsideClick(e) {
+    // Проверяем, что клик был вне меню и вне самой кнопки
+    if (!mobileMenu.contains(e.target) && !burgerBtn.contains(e.target)) {
+      closeMenu();
+    }
+  }
 
-  mobileMenu.addEventListener("click", function () {
-    burgerMenu.classList.remove("open");
+  // Функция для закрытия меню
+  function closeMenu() {
     mobileMenu.classList.remove("open");
-    burgerMenu.style.display = "block";
-    closeMenu.style.display = "none";
-  });
+    burgerBtn.classList.remove("active");
+    document.removeEventListener("mousedown", handleOutsideClick);
+    document.removeEventListener("scroll", closeMenu);
+    burgerBtn.style.display = "block";
+    // welcomeText.style.display = "flex";
+    closeBtn.style.display = "none";
+  }
+
+  // burgerMenu.addEventListener("click", function () {
+  //   burgerMenu.classList.toggle("open");
+  //   mobileMenu.classList.toggle("open");
+  //   burgerMenu.style.display = "none";
+  //   welcomeText.style.display = "none";
+  //   closeBtn.style.display = "block";
+  // });
+
+  // closeBtn.addEventListener("click", function () {
+  //   burgerMenu.classList.remove("open");
+  //   mobileMenu.classList.remove("open");
+  //   burgerMenu.style.display = "block";
+  //   welcomeText.style.display = "flex";
+  //   closeBtn.style.display = "none";
+  // });
+
+  // mobileMenu.addEventListener("click", function () {
+  //   burgerMenu.classList.remove("open");
+  //   mobileMenu.classList.remove("open");
+  //   burgerMenu.style.display = "block";
+  //   welcomeText.style.display = "flex";
+  //   closeBtn.style.display = "none";
+  // });
+
+  // document.addEventListener("click",  (e) => {
+  //   burgerMenu.classList.remove("open");
+  //   mobileMenu.classList.remove("open");
+  //   burgerMenu.style.display = "block";
+  //   welcomeText.style.display = "flex";
+  //   closeBtn.style.display = "none";
+  // });
 
   let slideCenter = $(".welcome-image");
   slideCenter.slick({
-    infinite: true,
-    slidesToShow: 1,
-    speed: 1000,
+    infinite: true, // бесконечный (зацикленный) слайдер
+    dots: false, // показать буллеты
+    arrows: true, // показать стрелки
+    // swipe: true, // включить свайпы мышкой и сенсорные жесты
+    speed: 500, // скорость анимации перелистывания (мс)
+    cssEase: "ease", // плавность анимации
+    slidesToShow: 1, // показывать 1 слайд за раз
+    slidesToScroll: 1, // перелистывать по 1 слайду
+    pauseOnHover: false, // не останавливать слайдер при наведении мыши
+    adaptiveHeight: true, // высота секции подстраивается под содержимое слайда
+
+    // Обеспечивает, что при частых кликах и свайпах слайды всегда центрированы
+    waitForAnimate: true,
   });
 
   let numSlider = $("#numSlider");
@@ -39,7 +133,7 @@ $(document).ready(function () {
 
   // Навигация по клику на кастомные "кубики"
   $(".slider-item").on("click", function () {
-    var num = Number($(this).attr("id")) - 1; // Slick использует индексацию с 0
+    const num = Number($(this).attr("id")) - 1; // Slick использует индексацию с 0
     slideCenter.slick("slickGoTo", num);
 
     // Стилизация активного кубика
@@ -58,29 +152,25 @@ $(document).ready(function () {
   // для видео
   $(".video-player").slick({
     slidesToShow: 1,
-    // slidesToScroll: 1,
     arrows: false,
     fade: true,
+    centerMode: true,
     asNavFor: ".video-posters",
+    waitForAnimate: true,
   });
   $(".video-posters").slick({
-    slidesToShow: 2,
+    slidesToShow: 3,
     slidesToScroll: 1,
     asNavFor: ".video-player",
     dots: false,
-    // centerMode: true,
     focusOnSelect: true,
+    adaptiveHeight: true,
+    arrows: false,
+    speed: 500,
+    cssEase: "ease",
+    // Обеспечивает, что при частых кликах и свайпах слайды всегда центрированы
+    waitForAnimate: true,
   });
-
-  // Инициализация слайдера
-  // $(".video-posters").slick({
-  //   slidesToShow: 2, // Сколько миниатюр видно одновременно (регулируйте на вкус)
-  //   slidesToScroll: 1,
-  // arrows: false, // Используем свои стрелки
-  // dots: false, // Свои кружочки
-  // infinite: false,
-  //   centerMode: false,
-  // });
 
   // При инициализации ставим первое видео в главный плеер
   updateMainVideoFromFirstThumb();
