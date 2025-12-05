@@ -38,6 +38,7 @@
   margin: 0;
   padding: 0;
   border: 0;
+  box-sizing: border-box;
   /* border: 1px solid red; */
 }
 
@@ -50,7 +51,7 @@ html {
 }
 
 .section {
-  padding: var(--padding-y) 0;
+  /* padding: var(--padding-y) 0; */
 }
 
 h1 {
@@ -59,13 +60,86 @@ h1 {
   border: 0;
 }
 
+.section-explore {
+  padding: 73px 0;
+}
+
 .dark-section,
 .dark-footer {
   background: var(--bg-dark);
 }
 
+.image-comparison-container {
+  width: 720px;
+  height: 700px;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  cursor: ew-resize;
+  margin-top: 15px;
+}
+
+.image-comparison-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.image-top-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 61%;
+  overflow: hidden;
+}
+
+.image-bottom,
+.image-top {
+  display: block;
+  width: 720px;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.slider-handle {
+  position: absolute;
+  top: 50%;
+  left: 61%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border: 5px solid var(--font-white);
+}
+
+.slider-handle::before {
+  content: " ";
+  position: absolute;
+  top: 100%;
+  left: 45%;
+  width: 5px;
+  height: 340px;
+  background-color: var(--font-white);
+}
+
+.slider-handle::after {
+  content: " ";
+  position: absolute;
+  bottom: 100%;
+  left: 45%;
+  width: 5px;
+  height: 340px;
+  background-color: var(--font-white);
+}
+
 .video-section {
-  padding-top: 90px;
+  padding: 75px 0;
 }
 
 .container {
@@ -81,7 +155,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 62px;
+  padding: 59px 0;
 }
 
 .header-logo,
@@ -92,6 +166,7 @@ h1 {
 
 .logo {
   transition: 1s;
+  margin-top: 5px;
 }
 
 .logo:hover {
@@ -108,6 +183,8 @@ h1 {
   text-transform: uppercase;
   color: var(--font-white);
   margin-left: 25px;
+  line-height: 31px;
+  padding-top: 7px;
 }
 
 .header-menu,
@@ -171,20 +248,26 @@ h1 {
   display: block;
   text-align: -webkit-right;
   position: relative;
+  margin-bottom: 60px;
 }
 
 .welcome-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   margin-top: 150px;
   position: absolute;
   z-index: 2;
-  background-color: var(--bg-dark);
-  box-shadow: -195px 53px 100px 263px var(--bg-dark);
 }
 
 .welcome-title {
-  max-width: 593px;
+  max-width: 600px;
   height: 180px;
   text-align: left;
+}
+
+.visiting-section {
+  padding: 75px 0;
 }
 
 .dark-title {
@@ -212,7 +295,7 @@ h1 {
 .underline-title::after {
   content: "";
   position: absolute;
-  bottom: -25px;
+  bottom: -30px;
   left: 0;
   width: 100%;
   height: 3px;
@@ -221,8 +304,31 @@ h1 {
 }
 
 .welcome-image {
+  display: flex;
   position: relative;
   margin-left: auto;
+}
+
+.slick-slide {
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 800px;  */
+}
+
+.slick-slide::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: linear-gradient(
+    to right,
+    rgb(0 0 0) 0%,
+    rgb(0 0 0) 3%,
+    rgb(0 0 0 / 0%) 5%
+  );
+  z-index: 9;
 }
 
 .slick-next:before {
@@ -240,11 +346,11 @@ h1 {
 }
 
 .slick-next {
-  right: 5%;
+  right: 6%;
 }
 
 .slick-prev {
-  left: 90%;
+  left: 89%;
 }
 
 .welcome-description {
@@ -288,29 +394,38 @@ h1 {
   width: 100%;
 }
 
-.welcome-image {
-  display: flex;
-}
-
 .welcome-slider {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
   position: absolute;
-  right: -4px;
-  bottom: -55px;
+  max-width: 600px;
+  height: 120px;
+  right: 0px;
+  bottom: -59px;
   padding: 40px 75px;
   background-color: var(--bg-dark);
   font-family: Roboto, sans-serif;
   font-size: 22px;
   color: var(--font-white);
+  z-index: 1;
+  align-items: center;
+}
+
+.slider-pages-text {
+  display: flex;
+  height: 40px;
+  font-weight: 400;
+  line-height: 40px;
+  text-transform: uppercase;
+  width: 80px;
+  letter-spacing: 3px;
 }
 
 .slider-list {
   display: flex;
-  width: 180px;
-  justify-content: space-between;
-  margin: 0 215px 0 55px;
+  width: 320px;
+  justify-content: flex-start;
+  margin-left: 50px;
+  gap: 25px;
 }
 
 .slider-item {
@@ -318,6 +433,7 @@ h1 {
   width: 16px;
   height: 16px;
   background: var(--font-white);
+  cursor: pointer;
 }
 
 .active {
@@ -342,8 +458,8 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   margin-top: 103px;
-  column-gap: 50px;
-  row-gap: 75px;
+  column-gap: 60px;
+  row-gap: 73px;
 }
 
 .visiting-item {
@@ -365,7 +481,7 @@ h1 {
   letter-spacing: 5px;
   text-transform: uppercase;
   color: var(--font-black);
-  margin-top: 25px;
+  margin-top: 21px;
   margin-bottom: 22px;
 }
 
@@ -376,7 +492,7 @@ h1 {
 .underline-title3::after {
   content: "";
   position: absolute;
-  bottom: -10px;
+  bottom: -11px;
   left: 0;
   width: 300px;
   height: 3px;
@@ -394,15 +510,23 @@ h1 {
   font-family: RobotoThin, sans-serif;
   font-style: normal;
   font-weight: 200;
-  font-size: 22px;
   line-height: 26px;
   color: var(--font-black);
-  margin-top: 10px;
+}
+
+.text1 {
+  font-size: 22px;
+}
+
+.text2 {
+  font-size: 18px;
+  margin-top: 7px;
 }
 
 .explore-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .explore-description {
@@ -430,7 +554,7 @@ h1 {
 
 .explore-image {
   margin-top: 15px;
-  max-width: 715px;
+  max-width: 720px;
 }
 
 .video-description {
@@ -453,14 +577,19 @@ h1 {
 
 .video-player {
   position: relative;
+  /* max-height: 809px; */
+  max-width: 1440px;
+  /* top: -35px; */
 }
 
 .video-content {
   width: 100%;
   height: 100%;
+  /* margin-bottom: 85px; */
 }
 
 .video-control {
+  display: none;
   width: 100%;
   position: absolute;
   right: 0;
@@ -470,13 +599,21 @@ h1 {
 .video-posters {
   display: flex;
   width: 100%;
-  margin-top: 40px;
+  /* margin-top: 40px; */
   justify-content: space-between;
-  column-gap: 42px;
+  /* column-gap: 42px; */
 }
 
 .video-poster {
-  width: 30%;
+  /* width: 30%;
+  margin: 0 21px; */
+}
+
+.slick-track {
+  display: flex;
+  /* gap: 20px; */
+  align-items: flex-start;
+  /* margin: 0 10px; */
 }
 
 .video-slider {
@@ -492,6 +629,7 @@ h1 {
   height: 12px;
   background: #999999;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .double-arrows-left,
@@ -508,6 +646,10 @@ h1 {
   background: var(--dark-red);
 }
 
+.gallery-section {
+  padding-top: 75px;
+}
+
 .gallery-items {
   display: flex;
   margin-top: 75px;
@@ -522,11 +664,28 @@ h1 {
 
 .gallery-column {
   max-width: 456px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  /* gap: 20px;
+  padding: 20px; */
 }
 
 .gallery-item img {
   margin-bottom: 24px;
   width: 100%;
+}
+
+/* Начальное состояние элементов до анимации */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Состояние элементов после анимации */
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .block2 {
@@ -535,13 +694,18 @@ h1 {
 
 .tikets-items {
   display: flex;
-  margin-top: 103px;
+  margin-top: 105px;
   justify-content: space-between;
+}
+
+.tikets-item {
+  display: flex;
 }
 
 .tikets-description {
   display: flex;
   flex-direction: column;
+  margin-left: 60px;
 }
 
 .tiket-title {
@@ -569,7 +733,7 @@ h1 {
   position: relative;
   width: 17px;
   height: 17px;
-  margin-right: 23px;
+  margin-right: 18px;
   border: 2px solid var(--font-black);
   border-radius: 50%;
   display: inline-block;
@@ -604,6 +768,20 @@ h1 {
   transition: 0.2s;
 }
 
+.tickets-section {
+  margin: 75px 0;
+}
+
+.tiket-block-total {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.tiket-title-amount {
+  margin-bottom: 24px;
+}
+
 .tiket-amount-text {
   font-family: RobotoLight, sans-serif;
   font-style: normal;
@@ -612,6 +790,7 @@ h1 {
   line-height: 26px;
   color: var(--font-black);
   margin-bottom: 15px;
+  width: 150px;
 }
 
 .tiket-amount {
@@ -619,7 +798,7 @@ h1 {
   justify-content: space-around;
   align-items: center;
   box-sizing: border-box;
-  max-width: 150px;
+  width: 150px;
   height: 50px;
   border: 3px solid var(--font-black);
   margin-bottom: 10px;
@@ -652,8 +831,8 @@ h1 {
 
   font-weight: 700;
   font-size: 28px;
-  line-height: 33px;
-  letter-spacing: 1.65px;
+  /* line-height: 33px;
+  letter-spacing: 1.65px; */
   color: var(--font-black);
 }
 
@@ -687,6 +866,11 @@ h1 {
   min-height: 400px;
   background: transparent;
 }
+
+.contacts-section {
+  margin: 75px 0;
+}
+
 .contacts-items {
   display: flex;
   margin-top: 103px;
@@ -723,20 +907,27 @@ h1 {
 
 .contacts-map {
   width: 100%;
+  width: 960px;
+  height: 620px;
+}
+
+.footer-items {
+  display: flex;
+}
+
+.footer-logo {
+  margin-right: 145px;
+  align-items: flex-start;
+}
+
+.footer-menu {
+  margin-top: 12px;
 }
 
 .footer-navigation {
   display: flex;
   padding-bottom: 50px;
   justify-content: space-between;
-}
-
-.footer-logo {
-  margin-right: 145px;
-}
-
-.footer-menu {
-  margin-top: 12px;
 }
 
 .footer-nav-list {
@@ -762,6 +953,7 @@ h1 {
 
 .nav-list-social {
   flex-wrap: nowrap;
+  margin-bottom: 30px;
 }
 
 .socials-nav-item {
@@ -813,7 +1005,7 @@ h1 {
 .footer-discription {
   display: flex;
   justify-content: space-between;
-  margin-top: 50px;
+  margin-top: 29px;
 }
 
 .footer-discription-text {
@@ -887,27 +1079,117 @@ h1 {
     flex-direction: column;
   }
 
+  /* ===========переделать================= */
+
+  .burger-menu-nav {
+    position: relative; /* Важно для позиционирования меню */
+    font-family: sans-serif;
+  }
+
+  /* Стили для кнопки-бургера */
+  .burger-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    position: relative;
+    z-index: 10;
+  }
+
+  /* Иконка-бургер (три полоски) */
+  .burger-icon,
+  .burger-icon::before,
+  .burger-icon::after {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    border-radius: 2px;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .burger-icon::before,
+  .burger-icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+  }
+
+  .burger-icon::before {
+    top: -8px;
+  }
+
+  .burger-icon::after {
+    top: 8px;
+  }
+
+  /* Анимация иконки при открытии меню */
+  .burger-toggle.open .burger-icon {
+    background-color: transparent; /* Средняя полоска исчезает */
+  }
+
+  .burger-toggle.open .burger-icon::before {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .burger-toggle.open .burger-icon::after {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  /* Стили для самого меню */
+  .menu-list {
+    position: absolute;
+    top: 100%; /* Размещаем под кнопкой */
+    left: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 200px;
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    transform: translateX(-100%); /* Скрываем меню за пределами экрана */
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .menu-list.open {
+    transform: translateX(0); /* Показываем меню */
+  }
+
+  .menu-list li a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: #333;
+  }
+  /* ============================= */
+
   .burger {
     display: block;
   }
 
-  .burger-menu.open {
-    left: 0;
-    border-radius: 5%;
-  }
-
   .burger-menu {
-    position: absolute;
-    left: -420px;
-    height: 525px;
-    box-shadow: 2px 0 12px rgba(0, 0, 0, 0.09);
     display: flex;
     flex-direction: column;
-    transition: left 0.5s;
-    z-index: 10;
-    width: 390px;
+    /* position: absolute; */
     top: 125px;
+    /* left: -420px; */
+    height: 525px;
+    /* width: 390px; */
+    box-shadow: 2px 0 12px rgba(0, 0, 0, 0.09);
+    /* transition: left 0.5s; */
+    z-index: 10;
     background: #030303;
+    transition: right 0.3s;
+    position: fixed;
+    left: -100vw;
+    /* top: 0; */
+    width: 300px;
+    /* height: 100vh; */
+  }
+
+  .burger-menu.open {
+    left: 0;
+    /* border-radius: 5%; */
   }
 
   .burger-menu-items {
@@ -953,7 +1235,7 @@ h1 {
   .welcome-text {
     margin-top: 50px;
     text-align: right;
-    box-shadow: -160px 0px 20px 190px var(--bg-dark);
+    /* box-shadow: -160px 0px 20px 190px var(--bg-dark); */
   }
 
   .welcome-description {
@@ -1108,10 +1390,6 @@ h1 {
     margin-bottom: 15px;
   }
 
-  .contacts-item.img {
-    max-width: 694px;
-  }
-
   .footer {
     padding: 40px 0 50px 0;
   }
@@ -1172,6 +1450,7 @@ h1 {
   }
 
   .welcome-text {
+    display: flex;
     margin-top: 0;
     position: unset;
     background-color: unset;
@@ -1185,6 +1464,10 @@ h1 {
     line-height: 23px;
     text-align: center;
     margin-bottom: 50px;
+  }
+
+  .slick-slide::before {
+    background: none;
   }
 
   .welcome-btn {
@@ -1527,6 +1810,9 @@ h1 {
   }
 
   .tiket-block-total {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
     padding: 40px 0;
   }
 
